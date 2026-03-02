@@ -9,15 +9,15 @@
   },
   "dependencies": {
     "@motionone/solid": "^10.16.4",
-    "@solidjs/router": "^0.15.3",
+    "@solidjs/router": "^0.15.4",
     "@solidjs/start": "2.0.0-alpha.2",
-    "@unocss/preset-wind4": "^66.5.2",
-    "@unocss/reset": "^66.5.2",
+    "@unocss/preset-wind4": "^66.6.3",
+    "@unocss/reset": "^66.6.3",
     "nitro": "3.0.1-alpha.2",
-    "solid-js": "^1.9.9",
+    "solid-js": "^1.9.11",
     "solid-motionone": "^1.0.4",
-    "unocss": "^66.5.2",
-    "vite": "^7.0.0"
+    "unocss": "^66.6.2",
+    "vite": "^7.3.1"
   },
   "engines": {
     "node": ">=22"
