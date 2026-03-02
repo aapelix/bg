@@ -1,12 +1,22 @@
+version: "3.9"
+
 services:
   backend:
-    image: ghcr.io/aapelix/bg-api:latest
+    image: "ghcr.io/aapelix/bg-api:latest"
     restart: unless-stopped
+    networks:
+      - bg-network
 
   frontend:
-    image: ghcr.io/aapelix/bg-client:latest
+    image: "ghcr.io/aapelix/bg-client:latest"
     restart: unless-stopped
     environment:
       - VITE_API_URL=http://backend:8000
     depends_on:
       - backend
+    networks:
+      - bg-network
+
+networks:
+  bg-network:
+    driver: bridge
