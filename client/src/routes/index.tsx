@@ -1,6 +1,8 @@
 import { createSignal } from "solid-js";
 import { Motion } from "solid-motionone";
 
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8000";
+
 export default function Home() {
   let input!: HTMLInputElement;
 
@@ -17,7 +19,7 @@ export default function Home() {
     form.append("file", file()!);
 
     try {
-      const res = await fetch("http://localhost:8000/remove-bg", {
+      const res = await fetch(`${API_URL}/remove-bg`, {
         method: "POST",
         body: form,
       });

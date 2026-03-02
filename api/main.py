@@ -11,7 +11,7 @@ from rembg import remove
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,  # ty:ignore[invalid-argument-type]
-    allow_origins=["http://localhost:3000"],
+    allow_origins=["*"],
     allow_methods=["*"],
     allow_headers=["*"],
 )

@@ -7,8 +7,8 @@ RUN bun run build
 
 FROM node:20-alpine
 WORKDIR /app
-RUN npm i -g serve
-COPY --from=builder /app/dist ./dist
+
+COPY --from=builder /app/.output ./.output
 
 EXPOSE 3000
-CMD ["serve", "-s", "dist", "-l", "3000"]
+CMD ["node", ".output/server/index.mjs"]
