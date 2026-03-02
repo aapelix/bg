@@ -56,6 +56,7 @@ export default function Home() {
         onClick={() => input.click()}
         class="px-5 py-2 w-56 rounded-xl bg-blue-500 hover:bg-blue-600 transition-colors duration-300 text-white text-sm font-medium shadow-sm cursor-pointer whitespace-nowrap text-ellipsis overflow-hidden"
         hover={{ scale: 1.05 }}
+        data-umami-event="Select Image"
       >
         {file() ? file()!.name : "Select Image"}
       </Motion.button>
@@ -65,6 +66,7 @@ export default function Home() {
         disabled={!file() || loading()}
         class="px-5 py-2 w-56 rounded-xl -mt-4 bg-black hover:bg-gray-900 transition-colors duration-300 text-white text-sm font-medium shadow-sm disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
         hover={{ scale: 1.03 }}
+        data-umami-event="Remove Background"
       >
         {loading() ? "Processing..." : "Remove Background"}
       </Motion.button>
@@ -92,6 +94,7 @@ export default function Home() {
             }}
             class="px-4 py-2 w-56 rounded-xl bg-green-500 hover:bg-green-600 transition-colors duration-300 text-white text-sm font-medium shadow-sm cursor-pointer"
             hover={{ scale: 1.03 }}
+            data-umami-event="Download Result"
           >
             Download
           </Motion.button>
