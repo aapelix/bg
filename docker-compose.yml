@@ -1,0 +1,12 @@
+services:
+  backend:
+    image: ghcr.io/aapelix/bg-api:latest
+    restart: unless-stopped
+
+  frontend:
+    image: ghcr.io/aapelix/bg-client:latest
+    restart: unless-stopped
+    environment:
+      - VITE_API_URL=http://backend:8000
+    depends_on:
+      - backend
