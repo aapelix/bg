@@ -5,7 +5,4 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
   plugins: [solidStart(), tailwindcss(), nitro()],
-  server: {
-    allowedHosts: ["localhost", "bg.aapelix.dev"],
-  },
 });
