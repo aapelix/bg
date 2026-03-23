@@ -1,7 +1,8 @@
 import { createSignal } from "solid-js";
 import { Motion } from "solid-motionone";
 
-const API_URL: string = import.meta.env.VITE_API_URL;
+const API_URL: string =
+  import.meta.env.VITE_API_URL ?? "https://bg-api.aapelix.dev";
 
 export default function Home() {
   let input!: HTMLInputElement;
